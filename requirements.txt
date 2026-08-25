@@ -1,0 +1,9 @@
+pandas
+pyarrow
+PyYAML
+xgboost
+scikit-learn
+torch
+streamlit
+plotly
+streamlit

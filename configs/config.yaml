@@ -1,0 +1,25 @@
+data:
+  raw_path: "data/raw/Dataset.csv"
+  processed_dir: "data/processed"
+  train_file: "train.csv"
+  val_file: "val.csv"
+  test_file: "test.csv"
+
+columns:
+  id_col: "Patient_ID"
+  time_col: "ICULOS"
+  label_col: "SepsisLabel"
+  static_cols: ["Age", "Gender", "HospAdmTime"]
+  vital_cols: ["HR", "O2Sat", "Temp", "SBP", "MAP", "DBP", "Resp"]
+  lab_cols: ["FiO2", "PaCO2", "WBC", "Creatinine", "BUN", "Platelets", "Lactate"]
+
+model:
+  type: "xgboost"
+  random_state: 42
+  n_estimators: 500
+  max_depth: 6
+  learning_rate: 0.05
+
+paths:
+  model_dir: "models"
+  model_name: "sepsis_xgb.pkl"
