@@ -4,14 +4,18 @@ data:
   train_file: "train.csv"
   val_file: "val.csv"
   test_file: "test.csv"
-
+  
 columns:
   id_col: "Patient_ID"
   time_col: "ICULOS"
   label_col: "SepsisLabel"
-  static_cols: ["Age", "Gender", "HospAdmTime"]
-  vital_cols: ["HR", "O2Sat", "Temp", "SBP", "MAP", "DBP", "Resp"]
-  lab_cols: ["FiO2", "PaCO2", "WBC", "Creatinine", "BUN", "Platelets", "Lactate"]
+  static_cols: ["Age", "Gender", "HospAdmTime", "Unit1", "Unit2"]
+  vital_cols: ["HR", "O2Sat", "Temp", "SBP", "MAP", "DBP", "Resp", "EtCO2"]
+  lab_cols: ["BaseExcess", "HCO3", "FiO2", "pH", "PaCO2", "SaO2", "AST", "BUN",
+             "Alkalinephos", "Calcium", "Chloride", "Creatinine", "Bilirubin_direct",
+             "Glucose", "Lactate", "Magnesium", "Phosphate", "Potassium",
+             "Bilirubin_total", "TroponinI", "Hct", "Hgb", "PTT", "WBC",
+             "Fibrinogen", "Platelets"]
 
 model:
   type: "xgboost"

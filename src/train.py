@@ -32,7 +32,7 @@ def train_xgb(X_train, y_train, X_val, y_val, model_cfg):
 
     model = xgb.XGBClassifier(
         n_estimators=model_cfg["n_estimators"],
-        max_depth=4,
+        max_depth=model_cfg["max_depth"],
         learning_rate=model_cfg["learning_rate"],
         subsample=0.7,
         colsample_bytree=0.7,
